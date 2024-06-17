@@ -1,1 +1,1 @@
-export { default as CollLogAPI } from './CollLogAPI'
+export * from './CollLogAPI'

@@ -10,6 +10,9 @@ import * as classes from './CollLogScores.module.css'
 const fetchAllScores = async () => {
     const promises = users.map(async (user) => ({
         username: user,
+        uniqueObtained: 0,
+        uniqueItems: 0,
+        petCount: 0,
     }))
 
     return Promise.all(promises)
