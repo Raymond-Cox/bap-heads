@@ -25,7 +25,7 @@ type Item = {
     sequence: number
 }
 
-export type Collection = {
+export interface Collection {
     /**
      * OSRS username
      */
@@ -33,7 +33,14 @@ export type Collection = {
     /**
      * The type of account the user has
      */
-    accountType: 'ULTIMATE_IRONMAN' | 'IRONMAN' | 'NORMAL'
+    accountType:
+        | 'NORMAL'
+        | 'IRONMAN'
+        | 'HARDCORE_IRONMAN'
+        | 'ULTIMATE_IRONMAN'
+        | 'GROUP_IRONMAN'
+        | 'HARDCORE_GROUP_IRONMAN'
+        | 'UNRANKED_GROUP_IRONMAN'
     /**
      * Total items obtained in the collection
      */
@@ -52,4 +59,11 @@ export type Collection = {
             }
         }
     }
+}
+
+export interface CollectionWithPets extends Collection {
+    /**
+     * The total number of pets obtained
+     */
+    petCount: number
 }

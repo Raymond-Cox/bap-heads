@@ -17,7 +17,7 @@ class CollLogAPI {
 
     /**
      * Fetches all user's scores. Counts pets and sorts by total uniques obtained.
-     * @returns {Promise<import('../api').Collection[]>}
+     * @returns {Promise<import('../api').CollectionWithPets[]>}
      */
     async fetchAllScores() {
         const promises = users.map(async (user) => this.getLogByUsername(user))

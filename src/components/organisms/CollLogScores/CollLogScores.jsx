@@ -1,22 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import scrollTop from '../../../assets/scroll_top.gif'
 import scrollBottom from '../../../assets/scroll_bottom.gif'
-import { users } from '../../../data'
 import * as classes from './CollLogScores.module.css'
-
-/**
- * Fetches all user's scores. ONLY FOR TESTING, NO API CALLS
- */
-const fetchAllScores = async () => {
-    const promises = users.map(async (user) => ({
-        username: user,
-        uniqueObtained: 0,
-        uniqueItems: 0,
-        petCount: 0,
-    }))
-
-    return Promise.all(promises)
-}
+import { CollLogAPI } from '../../../api'
+import { determineAccountTypeImg } from '../../../utils'
 
 /**
  * A table that displays the scores of users and their logged collections
@@ -24,7 +11,7 @@ const fetchAllScores = async () => {
 const CollLogScores = () => {
     const { data, isLoading } = useQuery({
         queryKey: ['collLogScores'],
-        queryFn: fetchAllScores,
+        queryFn: () => CollLogAPI.fetchAllScores(),
     })
 
     return (
@@ -50,6 +37,7 @@ const CollLogScores = () => {
                             (
                                 {
                                     username,
+                                    accountType,
                                     uniqueObtained,
                                     uniqueItems,
                                     petCount,
@@ -62,6 +50,12 @@ const CollLogScores = () => {
                                         <a
                                             href={`https://collectionlog.net/log/${username}`}
                                         >
+                                            <img
+                                                src={determineAccountTypeImg(
+                                                    accountType
+                                                )}
+                                                alt={username}
+                                            />
                                             {username}
                                         </a>
                                     </td>

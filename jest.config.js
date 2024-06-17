@@ -85,7 +85,7 @@ module.exports = {
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     moduleNameMapper: {
         '\\.(css|less)$': '<rootDir>/__mocks__/identity-obj-proxy-esm.js',
-        '\\.(png|jpg|gif|ttf|woff|woff2|svg)$':
+        '\\.(png|jpg|gif|ttf|woff|woff2|svg|webp)$':
             '<rootDir>/__mocks__/fileMock.js',
     },
 
