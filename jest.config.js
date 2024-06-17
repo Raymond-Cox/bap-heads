@@ -20,7 +20,7 @@ module.exports = {
     collectCoverage: true,
 
     // An array of glob patterns indicating a set of files for which coverage information should be collected
-    collectCoverageFrom: ['src/**/{!(index),}.js?(x)'],
+    collectCoverageFrom: ['src/**/{!(index|testUtils),}.js?(x)'],
 
     // The directory where Jest should output its coverage files
     coverageDirectory: 'coverage',
@@ -83,7 +83,11 @@ module.exports = {
     // ],
 
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-    // moduleNameMapper: {},
+    moduleNameMapper: {
+        '\\.(css|less)$': '<rootDir>/__mocks__/identity-obj-proxy-esm.js',
+        '\\.(png|jpg|gif|ttf|woff|woff2|svg)$':
+            '<rootDir>/__mocks__/fileMock.js',
+    },
 
     // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
     // modulePathIgnorePatterns: [],
@@ -178,8 +182,7 @@ module.exports = {
     // A map from regular expressions to paths to transformers
     transform: {
         '\\.[jt]sx?$': 'babel-jest',
-        '.+\\.(css|less|sass|scss|png|jpg|gif|ttf|woff|woff2|svg)$':
-            'jest-transform-stub',
+        '.+\\.(png|jpg|gif|ttf|woff|woff2|svg)$': 'jest-transform-stub',
     },
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation

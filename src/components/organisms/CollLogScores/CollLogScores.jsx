@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
-import scrollTop from '../../assets/scroll_top.gif'
-import scrollBottom from '../../assets/scroll_bottom.gif'
-import { users } from '../../data'
+import scrollTop from '../../../assets/scroll_top.gif'
+import scrollBottom from '../../../assets/scroll_bottom.gif'
+import { users } from '../../../data'
 import * as classes from './CollLogScores.module.css'
 
 /**

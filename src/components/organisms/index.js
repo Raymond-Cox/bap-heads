@@ -1,1 +1,1 @@
-export { default as CollLogScores } from './CollLogScores'
+export * from './CollLogScores'
