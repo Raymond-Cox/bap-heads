@@ -2,6 +2,21 @@ import CollLogScores from './CollLogScores'
 import { renderWithRouter } from '../../../utils/testUtils'
 import { waitFor } from '@testing-library/dom'
 import { users } from '../../../data'
+import { CollLogAPI } from '../../../api'
+
+jest.mock('../../../api/CollLogAPI')
+
+beforeEach(() => {
+    CollLogAPI.fetchAllScores.mockResolvedValue(
+        users.map((user, index) => ({
+            username: user,
+            accountType: 'normal',
+            uniqueObtained: index,
+            uniqueItems: 100,
+            petCount: 10,
+        }))
+    )
+})
 
 describe('<CollLogScores />', () => {
     test('shows loading message when loading', () => {

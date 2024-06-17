@@ -14,6 +14,7 @@ const CollLogScores = () => {
         queryFn: () => CollLogAPI.fetchAllScores(),
     })
 
+    console.log({ data })
     return (
         <div className={classes.mainContainer}>
             <img src={scrollTop} alt="top of scroll" />
