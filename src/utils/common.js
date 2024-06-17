@@ -1,10 +1,10 @@
-import brainrot from '../assets/accountTypes/brainrot.webp'
+import brainrot from '../assets/accountTypes/ultimate_ironman.webp'
 import normie from '../assets/accountTypes/normal.webp'
 import im from '../assets/accountTypes/ironman.webp'
 import him from '../assets/accountTypes/hardcore_ironman.webp'
-import gim from '../assets/accountTypes/gim.webp'
-import hgim from '../assets/accountTypes/hardcore_gim.webp'
-import ugim from '../assets/accountTypes/ugim.webp'
+import gim from '../assets/accountTypes/group_ironman.webp'
+import hgim from '../assets/accountTypes/hardcore_group_ironman.webp'
+import ugim from '../assets/accountTypes/unranked_group_ironman.webp'
 
 /**
  * Determine the account type image
