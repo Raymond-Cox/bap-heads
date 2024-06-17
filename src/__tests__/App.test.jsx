@@ -5,6 +5,6 @@ describe('<App />', () => {
     it('renders', () => {
         const { getByText } = render(<App />)
 
-        expect(getByText('Hello world!')).toBeDefined()
+        expect(getByText('Clog & Pet Hiscores')).toBeDefined()
     })
 })
