@@ -26,7 +26,7 @@ const CollLogScores = () => {
 
     return (
         <div className={classes.mainContainer}>
-            <img src={scrollTop} alt="top of scroll image" />
+            <img src={scrollTop} alt="top of scroll" />
 
             <div className={classes.tableContainer}>
                 <h2>Clog & Pet Hiscores</h2>
@@ -79,7 +79,7 @@ const CollLogScores = () => {
                     </tbody>
                 </table>
             </div>
-            <img src={scrollBottom} alt="bottom of scroll image" />
+            <img src={scrollBottom} alt="bottom of scroll" />
         </div>
     )
 }
