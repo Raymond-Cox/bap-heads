@@ -1,7 +1,7 @@
 {
-    "name": "react-boilerplate",
+    "name": "bap-heads",
     "version": "1.0.0",
-    "description": "A template for React projects using Parcel",
+    "description": "Website for Bap Heads OSRS clan",
     "source": "src/index.html",
     "browserslist": "> 0.5%, last 2 versions, not dead",
     "scripts": {
@@ -17,19 +17,18 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Raymond-Cox/react-boilerplate.git"
+        "url": "git+https://github.com/Raymond-Cox/bap-heads.git"
     },
     "keywords": [
         "React",
-        "Template",
-        "Boilerplate"
+        "OSRS"
     ],
     "author": "Raymond-Cox",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Raymond-Cox/react-boilerplate/issues"
+        "url": "https://github.com/Raymond-Cox/bap-heads/issues"
     },
-    "homepage": "https://github.com/Raymond-Cox/react-boilerplate#readme",
+    "homepage": "https://github.com/Raymond-Cox/bap-heads#readme",
     "dependencies": {
         "axios": "^1.7.2",
         "react": "^18.3.1",
