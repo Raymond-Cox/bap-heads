@@ -9,6 +9,7 @@
         "eslint-config-standard",
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
+        "plugin:@tanstack/eslint-plugin-query/recommended",
         "prettier"
     ],
     "overrides": [
