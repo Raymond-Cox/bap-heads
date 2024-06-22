@@ -1,75 +1,76 @@
 {
-    "name": "bap-heads",
-    "version": "1.0.0",
-    "description": "Website for Bap Heads OSRS clan",
-    "source": "src/index.html",
-    "browserslist": "> 0.5%, last 2 versions, not dead",
-    "scripts": {
-        "start": "parcel --open -p 3000",
-        "clean": "rm -rf dist",
-        "build": "parcel build --public-url ./",
-        "test": "jest",
-        "lint": "eslint .",
-        "pretty": "prettier --write .",
-        "pretty-check": "prettier --check .",
-        "prepare": "husky",
-        "ts:check": "tsc"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Raymond-Cox/bap-heads.git"
-    },
-    "keywords": [
-        "React",
-        "OSRS"
-    ],
-    "author": "Raymond-Cox",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Raymond-Cox/bap-heads/issues"
-    },
-    "homepage": "https://github.com/Raymond-Cox/bap-heads#readme",
-    "dependencies": {
-        "@tanstack/react-query": "^5.45.1",
-        "@tanstack/react-query-devtools": "^5.45.1",
-        "axios": "^1.7.2",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.24.7",
-        "@babel/preset-react": "^7.24.7",
-        "@parcel/babel-plugin-transform-runtime": "^2.12.0",
-        "@parcel/babel-preset-env": "^2.12.0",
-        "@tanstack/eslint-plugin-query": "^5.43.1",
-        "@testing-library/dom": "^10.1.0",
-        "@testing-library/react": "^16.0.0",
-        "@types/jest": "^29.5.12",
-        "@types/react": "^18.3.3",
-        "babel-jest": "^29.7.0",
-        "buffer": "^6.0.3",
-        "eslint": "^8.48.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-config-standard": "^17.1.0",
-        "eslint-plugin-import": "^2.29.1",
-        "eslint-plugin-jest": "^28.6.0",
-        "eslint-plugin-n": "^17.9.0",
-        "eslint-plugin-promise": "^6.2.0",
-        "eslint-plugin-react": "^7.34.2",
-        "husky": "^9.0.11",
-        "identity-obj-proxy": "^3.0.0",
-        "jest": "^29.7.0",
-        "jest-environment-jsdom": "^29.7.0",
-        "jest-sonar": "^0.2.16",
-        "jest-transform-stub": "^2.0.0",
-        "lint-staged": "^15.2.7",
-        "parcel": "^2.12.0",
-        "prettier": "^3.3.2",
-        "process": "^0.11.10",
-        "typescript": "^5.4.5"
-    },
-    "lint-staged": {
-        "*.{js,jsx}": "eslint .",
-        "*.{js,css,scss,md,json,html}": "prettier --write ."
-    }
+  "name": "bap-heads",
+  "version": "1.0.0",
+  "description": "Website for Bap Heads OSRS clan",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel --open -p 3000",
+    "clean": "rm -rf dist",
+    "build": "parcel build --public-url ./",
+    "test": "jest",
+    "lint": "eslint .",
+    "pretty": "prettier --write .",
+    "pretty-check": "prettier --check .",
+    "prepare": "husky",
+    "ts:check": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raymond-Cox/bap-heads.git"
+  },
+  "keywords": [
+    "React",
+    "OSRS"
+  ],
+  "author": "Raymond-Cox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Raymond-Cox/bap-heads/issues"
+  },
+  "homepage": "https://github.com/Raymond-Cox/bap-heads#readme",
+  "dependencies": {
+    "@tanstack/react-query": "^5.45.1",
+    "@tanstack/react-query-devtools": "^5.45.1",
+    "axios": "^1.7.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "@parcel/babel-plugin-transform-runtime": "^2.12.0",
+    "@parcel/babel-preset-env": "^2.12.0",
+    "@tanstack/eslint-plugin-query": "^5.43.1",
+    "@testing-library/dom": "^10.1.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.3.3",
+    "babel-jest": "^29.7.0",
+    "buffer": "^6.0.3",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^28.6.0",
+    "eslint-plugin-n": "^17.9.0",
+    "eslint-plugin-promise": "^6.2.0",
+    "eslint-plugin-react": "^7.34.2",
+    "husky": "^9.0.11",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-sonar": "^0.2.16",
+    "jest-transform-stub": "^2.0.0",
+    "lint-staged": "^15.2.7",
+    "parcel": "^2.12.0",
+    "prettier": "^3.3.2",
+    "process": "^0.11.10",
+    "typescript": "^5.4.5"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint .",
+    "*.{js,css,scss,md,json,html}": "prettier --write ."
+  }
 }

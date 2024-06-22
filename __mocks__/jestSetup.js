@@ -4,10 +4,10 @@
  */
 
 jest.mock('axios', () => {
-    const mocked = jest.genMockFromModule('axios')
+  const mocked = jest.genMockFromModule('axios')
 
-    return {
-        __esModule: true,
-        ...mocked,
-    }
+  return {
+    __esModule: true,
+    ...mocked,
+  }
 })

@@ -2,9 +2,9 @@ import { render } from '@testing-library/react'
 import App from '../App'
 
 describe('<App />', () => {
-    it('renders', () => {
-        const { getByText } = render(<App />)
+  it('renders', () => {
+    const { getByText } = render(<App />)
 
-        expect(getByText('Clog & Pet Hiscores')).toBeDefined()
-    })
+    expect(getByText('Clog & Pet Hiscores')).toBeDefined()
+  })
 })

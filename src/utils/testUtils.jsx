@@ -15,28 +15,28 @@ const defaultOptions = { wrapper: Passthrough }
  * @param {object} [options] - https://testing-library.com/docs/react-testing-library/api/#render-options
  */
 export const renderWithRouter = (Component, options = defaultOptions) => {
-    const queryClient = new QueryClient({
-        defaultOptions: {
-            queries: {
-                retry: false,
-            },
-        },
-    })
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+  })
 
-    const WrappedComponent = ({ children }) => {
-        const Wrapper = options.wrapper
+  const WrappedComponent = ({ children }) => {
+    const Wrapper = options.wrapper
 
-        return (
-            <QueryClientProvider client={queryClient}>
-                <Wrapper>{children}</Wrapper>
-            </QueryClientProvider>
-        )
-    }
+    return (
+      <QueryClientProvider client={queryClient}>
+        <Wrapper>{children}</Wrapper>
+      </QueryClientProvider>
+    )
+  }
 
-    return {
-        ...render(<WrappedComponent>{Component}</WrappedComponent>),
-        queryClient,
-    }
+  return {
+    ...render(<WrappedComponent>{Component}</WrappedComponent>),
+    queryClient,
+  }
 }
 
 /**
@@ -46,22 +46,20 @@ export const renderWithRouter = (Component, options = defaultOptions) => {
  * @param {import('@testing-library/react').RenderHookOptions} options https://react-hooks-testing-library.com/reference/api#renderhook-options
  */
 export const renderHookWithQueryClient = (hook, options = {}) => {
-    const queryClient = new QueryClient({
-        defaultOptions: {
-            queries: {
-                retry: false,
-            },
-        },
-    })
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+  })
 
-    const WrappedComponent = ({ children }) => (
-        <QueryClientProvider client={queryClient}>
-            {children}
-        </QueryClientProvider>
-    )
+  const WrappedComponent = ({ children }) => (
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+  )
 
-    return {
-        ...renderHook(hook, { wrapper: WrappedComponent, ...options }),
-        queryClient,
-    }
+  return {
+    ...renderHook(hook, { wrapper: WrappedComponent, ...options }),
+    queryClient,
+  }
 }

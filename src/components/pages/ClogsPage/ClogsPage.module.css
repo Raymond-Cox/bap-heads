@@ -1,0 +1,52 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  min-height: 60vh;
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../../../assets/scroll_middle.gif');
+  background-size: 100%;
+  background-repeat: repeat-y;
+  padding: 1rem;
+  align-items: center;
+}
+
+.tableWrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 20px 0;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+}
+
+table a {
+  text-decoration: none;
+  color: black;
+}
+
+table a img {
+  width: 15px;
+  margin-right: 5px;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+  .tableContainer {
+    padding: 0.5rem;
+  }
+}

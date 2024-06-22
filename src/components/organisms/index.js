@@ -1,1 +1,1 @@
-export * from './CollLogScores'
+export const f = 1

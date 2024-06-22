@@ -1,21 +1,21 @@
 import axios from 'axios'
 
 class BapHeadAPI {
-    constructor() {
-        this.api = axios.create({
-            baseURL: process.env.BAPHEAD_API_URL,
-        })
-    }
+  constructor() {
+    this.api = axios.create({
+      baseURL: process.env.BAPHEAD_API_URL,
+    })
+  }
 
-    /**
-     * Fetches all user's scores.
-     * @returns {Promise<import('../api').Collection[]>}
-     */
-    async fetchClogs() {
-        const { data } = await this.api.get('/collectionlog')
+  /**
+   * Fetches all user's scores.
+   * @returns {Promise<import('../api').Collection[]>}
+   */
+  async fetchClogs() {
+    const { data } = await this.api.get('/collectionlog')
 
-        return data
-    }
+    return data
+  }
 }
 
 export default new BapHeadAPI()

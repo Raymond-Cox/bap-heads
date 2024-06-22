@@ -1,2 +1,2 @@
-// Remove after adding something to this file.
-export const e = 1
+export { default as HomePage } from './HomePage'
+export * from './ClogsPage'

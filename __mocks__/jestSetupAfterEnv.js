@@ -1,7 +1,7 @@
 beforeAll(() => {
-    jest.useFakeTimers({ advanceTimers: true })
+  jest.useFakeTimers({ advanceTimers: true })
 })
 
 afterAll(() => {
-    jest.useRealTimers()
+  jest.useRealTimers()
 })
