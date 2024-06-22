@@ -1,0 +1,53 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+.middleContainer {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../../../assets/scroll_mid.gif');
+  background-size: 100% 164px;
+  background-repeat: repeat-y;
+  padding: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+.middleContainer::before {
+  content: '';
+  height: 50px;
+  left: -1%;
+  position: absolute;
+  top: -11px;
+  width: 103%;
+
+  background-image: url('../../../assets/scroll_top.gif');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+
+.middleContainer::after {
+  content: '';
+  height: 50px;
+  left: -1%;
+  position: absolute;
+  bottom: -11px;
+  top: auto;
+  width: 103%;
+
+  background-image: url('../../../assets/scroll_bottom.gif');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+
+@media screen and (min-width: 500px) {
+  .middleContainer {
+    padding: 2rem;
+  }
+}

@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom'
-import { routes } from '../../../routes/routes'
 import * as classes from './Navbar.module.css'
 
-const links = routes[0].children.map(({ path, title }) => ({ path, title }))
+const links = [
+  { path: '/', title: 'Home' },
+  { path: '/clogs', title: 'Collection Logs' },
+]
 
 const Navbar = () => {
   return (

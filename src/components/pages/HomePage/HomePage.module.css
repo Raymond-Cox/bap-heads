@@ -1,0 +1,21 @@
+h1 {
+  color: var(--header-color);
+  text-shadow: 1px 1px 1px #000000;
+}
+
+img {
+  width: 100%;
+}
+
+.socialsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialsContainer a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--subheader-color);
+}
