@@ -1,19 +1,21 @@
 import CollLogScores from './CollLogScores'
 import { renderWithRouter } from '../../../utils/testUtils'
 import { waitFor } from '@testing-library/dom'
-import { users } from '../../../data'
-import { CollLogAPI } from '../../../api'
+import { BapHeadAPI } from '../../../api'
 
-jest.mock('../../../api/CollLogAPI')
+jest.mock('../../../api')
+
+const users = ['user1', 'user2', 'user3']
 
 beforeEach(() => {
-    CollLogAPI.fetchAllScores.mockResolvedValue(
+    BapHeadAPI.fetchClogs.mockResolvedValue(
         users.map((user, index) => ({
             username: user,
-            accountType: 'normal',
+            accountType: 'NORMAL',
             uniqueObtained: index,
             uniqueItems: 100,
             petCount: 10,
+            lastCheckpointUniqueObtained: 0,
         }))
     )
 })
