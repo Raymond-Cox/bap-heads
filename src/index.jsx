@@ -5,18 +5,12 @@ import { routes } from './routes/routes'
 
 const container = document.getElementById('app')
 const root = createRoot(container)
-const router = createBrowserRouter(routes)
+const router = createBrowserRouter(routes, {
+  basename: process.env.NODE_ENV === 'development' ? undefined : '/bap-heads/',
+})
 
 root.render(
   <StrictMode>
-    <RouterProvider
-      router={
-        (router,
-        {
-          basename:
-            process.env.NODE_ENV === 'development' ? undefined : '/bap-heads/',
-        })
-      }
-    />
+    <RouterProvider router={router} />
   </StrictMode>
 )
