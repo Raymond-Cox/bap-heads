@@ -1,35 +1,9 @@
-type Item = {
-    /**
-     * Game item ID
-     */
-    id: number
-    /**
-     * Item name
-     */
-    name: string
-    /**
-     * Item quantity
-     */
-    quantity: number
-    /**
-     * Whether the item is obtained
-     */
-    obtained: boolean
-    /**
-     * ISO Date the item was obtained
-     */
-    obtainedAt: string | null
-    /**
-     * The natural index the item appears in the collection log
-     */
-    sequence: number
-}
-
 export interface Collection {
     /**
      * OSRS username
      */
     username: string
+    displayName: string
     /**
      * The type of account the user has
      */
@@ -50,20 +24,11 @@ export interface Collection {
      */
     uniqueItems: number
     /**
-     * There are more tabs, but I'm only typing the one we need
-     */
-    tabs: {
-        Other: {
-            'All Pets': {
-                items: Item[]
-            }
-        }
-    }
-}
-
-export interface CollectionWithPets extends Collection {
-    /**
      * The total number of pets obtained
      */
     petCount: number
+    /**
+     * Number of items obtained at the last checkpoint
+     */
+    lastCheckpointUniqueObtained: number
 }

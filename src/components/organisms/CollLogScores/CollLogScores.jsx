@@ -2,8 +2,8 @@ import { useQuery } from '@tanstack/react-query'
 import scrollTop from '../../../assets/scroll_top.gif'
 import scrollBottom from '../../../assets/scroll_bottom.gif'
 import * as classes from './CollLogScores.module.css'
-import { CollLogAPI } from '../../../api'
 import { determineAccountTypeImg } from '../../../utils'
+import { BapHeadAPI } from '../../../api'
 
 /**
  * A table that displays the scores of users and their logged collections
@@ -11,7 +11,7 @@ import { determineAccountTypeImg } from '../../../utils'
 const CollLogScores = () => {
     const { data, isLoading } = useQuery({
         queryKey: ['collLogScores'],
-        queryFn: () => CollLogAPI.fetchAllScores(),
+        queryFn: () => BapHeadAPI.fetchClogs(),
     })
 
     return (
@@ -20,7 +20,6 @@ const CollLogScores = () => {
 
             <div className={classes.tableContainer}>
                 <h2>Clog & Pet Hiscores</h2>
-                {isLoading && <p>Loading - please wait...</p>}
 
                 <table className={classes.table}>
                     <thead>
@@ -75,6 +74,8 @@ const CollLogScores = () => {
                         )}
                     </tbody>
                 </table>
+
+                {isLoading && <p>Loading - please wait...</p>}
             </div>
             <img src={scrollBottom} alt="bottom of scroll" />
         </div>
