@@ -3,14 +3,17 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 1rem 6rem;
+    padding: 1rem 2rem;
     background-image: url('../../assets/rsbg.jpg');
     background-repeat: repeat-y;
     background-attachment: fixed;
-    background-size: contain;
+    background-position: top center;
+    background-size: auto;
+    background-color: black;
 }
 
 .headerImg {
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     margin-bottom: 1rem;
 }

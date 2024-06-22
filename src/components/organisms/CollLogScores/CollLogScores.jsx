@@ -19,61 +19,70 @@ const CollLogScores = () => {
             <img src={scrollTop} alt="top of scroll" />
 
             <div className={classes.tableContainer}>
-                <h2>Clog & Pet Hiscores</h2>
+                <h3>Clog & Pet Hiscores</h3>
 
-                <table className={classes.table}>
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Username</th>
-                            <th>Collection Score</th>
-                            <th>Pets</th>
-                        </tr>
-                    </thead>
+                <div className={classes.tableWrapper}>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Username</th>
+                                <th>Collection Score</th>
+                                <th>Change</th>
+                                <th>Pets</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        {data?.map(
-                            (
-                                {
-                                    username,
-                                    accountType,
-                                    uniqueObtained,
-                                    uniqueItems,
-                                    petCount,
-                                },
-                                index
-                            ) => (
-                                <tr key={username}>
-                                    <td>{index + 1}</td>
-                                    <td>
-                                        <a
-                                            href={`https://collectionlog.net/log/${username}`}
-                                        >
-                                            <img
-                                                src={determineAccountTypeImg(
-                                                    accountType
-                                                )}
-                                                alt={username}
-                                            />
-                                            {username}
-                                        </a>
-                                    </td>
+                        <tbody>
+                            {data?.map(
+                                (
+                                    {
+                                        username,
+                                        accountType,
+                                        uniqueObtained,
+                                        uniqueItems,
+                                        petCount,
+                                        lastCheckpointUniqueObtained,
+                                    },
+                                    index
+                                ) => (
+                                    <tr key={username}>
+                                        <td>{index + 1}</td>
+                                        <td>
+                                            <a
+                                                href={`https://collectionlog.net/log/${username}`}
+                                            >
+                                                <img
+                                                    src={determineAccountTypeImg(
+                                                        accountType
+                                                    )}
+                                                    alt={username}
+                                                />
+                                                {username}
+                                            </a>
+                                        </td>
 
-                                    <td>
-                                        {uniqueObtained} / {uniqueItems}
-                                    </td>
-                                    <td>
-                                        <a
-                                            href={`https://collectionlog.net/log/${username}/All%20Pets`}
-                                        >
-                                            {petCount}
-                                        </a>
-                                    </td>
-                                </tr>
-                            )
-                        )}
-                    </tbody>
-                </table>
+                                        <td>
+                                            {uniqueObtained} / {uniqueItems}
+                                        </td>
+                                        <td>
+                                            +
+                                            {uniqueObtained -
+                                                lastCheckpointUniqueObtained}
+                                        </td>
+                                        <td>
+                                            <a
+                                                href={`https://collectionlog.net/log/${username}/All%20Pets`}
+                                            >
+                                                {petCount}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                )
+                            )}
+                        </tbody>
+                    </table>
+                </div>
 
                 {isLoading && <p>Loading - please wait...</p>}
             </div>

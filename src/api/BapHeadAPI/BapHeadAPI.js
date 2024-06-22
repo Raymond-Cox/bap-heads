@@ -13,7 +13,7 @@ class BapHeadAPI {
      */
     async fetchClogs() {
         const { data } = await this.api.get('/collectionlog')
-        console.log(data)
+
         return data
     }
 }
