@@ -9,6 +9,14 @@ const router = createBrowserRouter(routes)
 
 root.render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider
+      router={
+        (router,
+        {
+          basename:
+            process.env.NODE_ENV === 'development' ? undefined : '/bap-heads/',
+        })
+      }
+    />
   </StrictMode>
 )
