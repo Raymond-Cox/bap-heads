@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+}
+
+a {
+  color: var(--action-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  color: white !important;
+}

@@ -9,10 +9,12 @@ export const routes = [
         index: true,
         path: '/',
         element: <HomePage />,
+        title: 'Home',
       },
       {
         path: '/clogs',
         element: <ClogsPage />,
+        title: 'Collection Logs',
       },
     ],
   },

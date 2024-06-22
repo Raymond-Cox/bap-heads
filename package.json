@@ -6,7 +6,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel --open -p 3000",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && rm -rf .parcel-cache",
     "build": "parcel build --public-url ./",
     "test": "jest",
     "lint": "eslint .",
