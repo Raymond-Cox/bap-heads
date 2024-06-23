@@ -16,12 +16,12 @@ const socials = [
 
 const items = [
   {
-    link: 'https://cdn.discordapp.com/attachments/1108059336355360768/1252003284210679948/Bap_Times_issue_1.png?ex=6677e2ac&is=6676912c&hm=ea68ec8634b70ca8a816feea27e33e365564d51b965d04f50c6e0a6c820cf0e7&',
+    link: 'https://i.imgur.com/ZVMcNMR.jpeg',
     alt: 'BapHeads Newsletter',
     text: 'Newsletter',
   },
   {
-    link: 'https://cdn.discordapp.com/attachments/1108059336355360768/1252003285481558077/bh_june_2024_4.png?ex=6677e2ac&is=6676912c&hm=aec4b788f120ab276277488e5263d667d5ff3316be6a700fbfbbc37169a5f786&',
+    link: 'https://i.imgur.com/R6DBVQ0.png',
     alt: 'BapHeads Calendar',
     text: 'Calendar',
   },
