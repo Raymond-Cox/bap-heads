@@ -16,7 +16,7 @@ const socials = [
 
 const items = [
   {
-    link: 'https://i.imgur.com/ZVMcNMR.jpeg',
+    link: 'https://i.imgur.com/aYj11UR.png',
     alt: 'BapHeads Newsletter',
     text: 'Newsletter',
   },
