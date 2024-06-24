@@ -11,6 +11,7 @@ beforeEach(() => {
   BapHeadAPI.fetchClogs.mockResolvedValue(
     users.map((user, index) => ({
       username: user,
+      displayName: user,
       accountType: 'NORMAL',
       uniqueObtained: index,
       uniqueItems: 100,
