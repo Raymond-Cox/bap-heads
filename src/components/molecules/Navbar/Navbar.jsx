@@ -6,6 +6,9 @@ const links = [
   { path: '/clogs', title: 'Collection Logs' },
 ]
 
+/**
+ * A navigation bar that links to the main pages of the application.
+ */
 const Navbar = () => {
   return (
     <nav>

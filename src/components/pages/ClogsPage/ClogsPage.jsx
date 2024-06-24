@@ -34,6 +34,7 @@ const ClogsPage = () => {
               (
                 {
                   username,
+                  displayName,
                   accountType,
                   uniqueObtained,
                   uniqueItems,
@@ -42,15 +43,19 @@ const ClogsPage = () => {
                 },
                 index
               ) => (
-                <tr key={username}>
+                <tr key={displayName}>
                   <td>{index + 1}</td>
                   <td>
-                    <a href={`https://collectionlog.net/log/${username}`}>
+                    <a
+                      href={`https://collectionlog.net/log/${username}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <img
                         src={determineAccountTypeImg(accountType)}
-                        alt={username}
+                        alt={displayName}
                       />
-                      {username}
+                      {displayName}
                     </a>
                   </td>
 
@@ -61,6 +66,8 @@ const ClogsPage = () => {
                   <td>
                     <a
                       href={`https://collectionlog.net/log/${username}/All%20Pets`}
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       {petCount}
                     </a>

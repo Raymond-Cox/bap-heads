@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-bottom: 0;
+  color: whitesmoke;
+  font-size: 12px;
+}
+
+.container p {
+  margin: 0;
+}
+
+.container img {
+  width: 50px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
