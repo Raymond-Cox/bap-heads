@@ -60,7 +60,7 @@ const ClogsPage = () => {
               ) => (
                 <tr key={displayName}>
                   <td>{index + 1}</td>
-                  <td>{renderChangeIcon(index - lastCheckpointRankIndex)}</td>
+                  <td>{renderChangeIcon(lastCheckpointRankIndex - index)}</td>
                   <td>
                     <a
                       href={`https://collectionlog.net/log/${username}`}
