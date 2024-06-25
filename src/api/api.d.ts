@@ -31,4 +31,8 @@ export interface Collection {
    * Number of items obtained at the last checkpoint
    */
   lastCheckpointUniqueObtained: number
+  /**
+   * The rank of the user in the collection at the last checkpoint (0-indexed)
+   */
+  lastCheckpointRankIndex: number
 }

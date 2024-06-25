@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
+import { FaArrowUp, FaArrowDown } from 'react-icons/fa'
 import { determineAccountTypeImg } from '../../../utils'
 import { BapHeadAPI } from '../../../api'
 import { ScrollBG } from '../../molecules'
@@ -13,6 +14,18 @@ const ClogsPage = () => {
     queryFn: () => BapHeadAPI.fetchClogs(),
   })
 
+  /**
+   * Renders an arrow icon based on the change value
+   * @param {number} change
+   */
+  const renderChangeIcon = (change) => {
+    if (change > 0) {
+      return <FaArrowUp color="green" />
+    } else if (change < 0) {
+      return <FaArrowDown color="red" />
+    }
+  }
+
   return (
     <ScrollBG>
       <h3>Clog & Pet Hiscores</h3>
@@ -22,6 +35,7 @@ const ClogsPage = () => {
           <thead>
             <tr>
               <th>Rank</th>
+              <th />
               <th>Username</th>
               <th>Collection Score</th>
               <th>Change</th>
@@ -40,11 +54,13 @@ const ClogsPage = () => {
                   uniqueItems,
                   petCount,
                   lastCheckpointUniqueObtained,
+                  lastCheckpointRankIndex,
                 },
                 index
               ) => (
                 <tr key={displayName}>
                   <td>{index + 1}</td>
+                  <td>{renderChangeIcon(index - lastCheckpointRankIndex)}</td>
                   <td>
                     <a
                       href={`https://collectionlog.net/log/${username}`}
