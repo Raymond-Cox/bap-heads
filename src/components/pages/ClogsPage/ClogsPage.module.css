@@ -1,3 +1,9 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .tableWrapper {
   max-width: 100%;
   overflow-x: auto;

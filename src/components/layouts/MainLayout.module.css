@@ -18,6 +18,7 @@
   gap: 10px;
   padding: 1rem 2rem;
   margin-bottom: 1rem;
+  min-height: 100vh;
 }
 
 .headerImg {

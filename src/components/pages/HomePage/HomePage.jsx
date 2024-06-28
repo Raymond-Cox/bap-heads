@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { FiExternalLink } from 'react-icons/fi'
-import { ScrollBG } from '../../molecules'
+import { NewsItem, ScrollBG } from '../../molecules'
 import * as classes from './HomePage.module.css'
 
 const socials = [
@@ -16,14 +16,17 @@ const socials = [
 
 const items = [
   {
-    link: 'https://i.imgur.com/aYj11UR.png',
-    alt: 'BapHeads Newsletter',
-    text: 'Newsletter',
+    url: 'https://i.imgur.com/aYj11UR.png',
+    title: 'Bap Times Issue #1',
+    description:
+      'Read about the latest clan news, events, and more in the first issue of the Bap Times.',
+    date: '6/1/2024',
   },
   {
-    link: 'https://i.imgur.com/R6DBVQ0.png',
-    alt: 'BapHeads Calendar',
-    text: 'Calendar',
+    url: 'https://i.imgur.com/R6DBVQ0.png',
+    title: 'June Events',
+    description: 'Check out the events we have planned for the month of June.',
+    date: '6/1/2024',
   },
 ]
 
@@ -40,16 +43,16 @@ const HomePage = () => {
         ))}
       </div>
 
-      <hr />
+      <h3>News and Updates</h3>
 
-      {items.map(({ link, alt, text }) => (
-        <Fragment key={link}>
-          <h2>{text}</h2>
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            <img src={link} alt={alt} />
-          </a>
-        </Fragment>
-      ))}
+      <div>
+        {items.map((item) => (
+          <Fragment key={item.url}>
+            <NewsItem {...item} />
+            <hr />
+          </Fragment>
+        ))}
+      </div>
     </ScrollBG>
   )
 }

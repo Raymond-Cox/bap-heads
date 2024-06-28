@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.imgContainer {
+  flex: 2;
+}
+
+.textContainer {
+  flex: 2;
+}
+
+.container a {
+  color: var(--subheader-color);
+  font-weight: bold;
+}
+
+.date {
+  font-style: italic;
+}

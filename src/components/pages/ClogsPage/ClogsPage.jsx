@@ -20,16 +20,19 @@ const ClogsPage = () => {
    */
   const renderChangeIcon = (change) => {
     if (change > 0) {
-      return <FaArrowUp color="green" />
+      return <FaArrowUp color="#367E18" />
     } else if (change < 0) {
-      return <FaArrowDown color="red" />
+      return <FaArrowDown color="#DF2E38" />
     }
   }
 
   return (
     <ScrollBG>
-      <h3>Clog & Pet Hiscores</h3>
-      <p>(Updated hourly, Change = new drops obtained since Sunday.)</p>
+      <div className={classes.header}>
+        <h3>Clog & Pet Hiscores</h3>
+        <p>(Updated hourly, Change = new drops obtained since Sunday.)</p>
+      </div>
+
       <div className={classes.tableWrapper}>
         <table>
           <thead>
