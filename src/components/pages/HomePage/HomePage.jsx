@@ -18,6 +18,14 @@ const HomePage = () => {
         ))}
       </div>
 
+      <div className={classes.featuredContainer}>
+        <iframe
+          src="https://streamable.com/e/j593y0"
+          allowFullScreen
+          className={classes.iframe}
+        />
+      </div>
+
       <h3>News and Updates</h3>
 
       <div>

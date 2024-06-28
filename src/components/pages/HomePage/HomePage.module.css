@@ -7,6 +7,19 @@ img {
   width: 100%;
 }
 
+.featuredContainer {
+  display: flex;
+  width: 100%;
+  min-height: 325px;
+}
+
+.iframe {
+  flex-grow: 1;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .socialsContainer {
   display: flex;
   gap: 1rem;
