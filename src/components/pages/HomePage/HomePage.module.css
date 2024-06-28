@@ -9,7 +9,6 @@ img {
 
 .socialsContainer {
   display: flex;
-  justify-content: center;
   gap: 1rem;
 }
 
@@ -18,4 +17,8 @@ img {
   align-items: center;
   gap: 5px;
   color: var(--subheader-color);
+}
+
+.socialsContainer img {
+  width: 25px;
 }
