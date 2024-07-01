@@ -16,7 +16,7 @@ export const socials = [
 
 export const newsItems = [
   {
-    url: 'https://i.imgur.com/3zW6HMK.jpeg',
+    url: 'https://i.imgur.com/JGJp5kP.png',
     title: 'Bap Times Issue #2',
     description:
       'Read about the latest clan news, events, and more in this promising sequel of the Bap Times.',
