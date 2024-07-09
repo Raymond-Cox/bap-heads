@@ -16,6 +16,23 @@ export const socials = [
 
 export const newsItems = [
   {
+    url: 'https://i.imgur.com/a0urCPE.jpeg',
+    title: 'Summer Bingo Board Reveal',
+    description:
+      'Summer Bingo sign ups are now open! Check out the board and get ready to compete for prizes.',
+    date: '7/8/2024',
+    actionHtml: (
+      <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+        <a href="https://docs.google.com/spreadsheets/d/1i-uU3AFwac_241e-ybhGcItHkIO-ihOUaKlF-XP9mFY/edit?gid=1602991438#gid=1602991438">
+          Rules and Info
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqnm7-Ylh4FdvJ-IBxM9xy-50b0Xa_Ji4FVfKqQ5nXwO9v_w/viewform">
+          Sign up here
+        </a>
+      </div>
+    ),
+  },
+  {
     url: 'https://i.imgur.com/JGJp5kP.png',
     title: 'Bap Times Issue #2',
     description:
