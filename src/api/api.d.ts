@@ -36,3 +36,12 @@ export interface Collection {
    */
   lastCheckpointRankIndex: number
 }
+
+export interface BapScore {
+  username: string
+  displayName: string
+  skilling: number
+  minigamesClues: number
+  pvm: number
+  total: number
+}
