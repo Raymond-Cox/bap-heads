@@ -16,6 +16,13 @@ export const socials = [
 
 export const newsItems = [
   {
+    url: 'https://i.imgur.com/UD15ZSE.png',
+    title: 'Bingo Teams',
+    description:
+      'Bingo teams have been announced. Each team has a new chat channel, so sync up with your team in the discord!',
+    date: '7/16/2024',
+  },
+  {
     url: 'https://i.imgur.com/a0urCPE.jpeg',
     title: 'Summer Bingo Board Reveal',
     description:
