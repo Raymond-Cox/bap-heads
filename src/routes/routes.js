@@ -1,5 +1,5 @@
 import App from '../App'
-import { BapScores, ClogsPage, HomePage } from '../components'
+import { ClogsPage, HomePage, BingoPage, BapScores } from '../components'
 
 export const routes = [
   {
@@ -20,6 +20,11 @@ export const routes = [
         path: '/bapscores',
         element: <BapScores />,
         title: 'Bap Scores',
+      },
+      {
+        path: '/bingo',
+        element: <BingoPage />,
+        title: 'Bingo',
       },
     ],
   },
