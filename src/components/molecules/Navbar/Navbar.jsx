@@ -4,7 +4,6 @@ import * as classes from './Navbar.module.css'
 const links = [
   { path: '/', title: 'Home' },
   { path: '/clogs', title: 'Collection Logs' },
-  { path: '/bapscores', title: 'Bap Scores' },
   { path: '/bingo', title: 'Bingo' },
 ]
 
