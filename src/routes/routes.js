@@ -1,5 +1,5 @@
 import App from '../App'
-import { ClogsPage, HomePage, BingoPage } from '../components'
+import { ClogsPage } from '../components'
 
 export const routes = [
   {
@@ -8,18 +8,8 @@ export const routes = [
       {
         index: true,
         path: '/',
-        element: <HomePage />,
-        title: 'Home',
-      },
-      {
-        path: '/clogs',
         element: <ClogsPage />,
         title: 'Collection Logs',
-      },
-      {
-        path: '/bingo',
-        element: <BingoPage />,
-        title: 'Bingo',
       },
     ],
   },
