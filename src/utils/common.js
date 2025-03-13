@@ -8,17 +8,17 @@ import ugim from '../assets/accountTypes/unranked_group_ironman.webp'
 
 /**
  * Determine the account type image
- * @param {"NORMAL"|"IRONMAN"|"HARDCORE_IRONMAN"|"ULTIMATE_IRONMAN"|"GROUP_IRONMAN"|"HARDCORE_GROUP_IRONMAN"|"UNRANKED_GROUP_IRONMAN"} accountType - The account type
+ * @param {"NORMAL"|"ironman"|"HARDCORE_IRONMAN"|"ultimate"|"regular"|"HARDCORE_GROUP_IRONMAN"|"UNRANKED_GROUP_IRONMAN"} accountType - The account type
  */
 export const determineAccountTypeImg = (accountType) => {
   switch (accountType) {
-    case 'IRONMAN':
+    case 'ironman':
       return im
     case 'HARDCORE_IRONMAN':
       return him
-    case 'ULTIMATE_IRONMAN':
+    case 'ultimate':
       return brainrot
-    case 'GROUP_IRONMAN':
+    case 'regular':
       return gim
     case 'HARDCORE_GROUP_IRONMAN':
       return hgim
