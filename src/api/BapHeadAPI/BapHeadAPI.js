@@ -16,16 +16,6 @@ class BapHeadAPI {
 
     return data
   }
-
-  /**
-   * Fetches all user's bap points.
-   * @returns {Promise<import('../api').BapScore[]>}
-   */
-  async fetchBapScores() {
-    const { data } = await this.api.get('/bap-points')
-
-    return data
-  }
 }
 
 export default new BapHeadAPI()

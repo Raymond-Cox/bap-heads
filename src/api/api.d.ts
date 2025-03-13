@@ -9,24 +9,17 @@ export interface Collection {
    */
   accountType:
     | 'NORMAL'
-    | 'IRONMAN'
+    | 'ironman'
     | 'HARDCORE_IRONMAN'
-    | 'ULTIMATE_IRONMAN'
-    | 'GROUP_IRONMAN'
+    | 'ultimate'
+    | 'regular'
     | 'HARDCORE_GROUP_IRONMAN'
     | 'UNRANKED_GROUP_IRONMAN'
+
   /**
    * Total items obtained in the collection
    */
   uniqueObtained: number
-  /**
-   * Total possible items in the collection
-   */
-  uniqueItems: number
-  /**
-   * The total number of pets obtained
-   */
-  petCount: number
   /**
    * Number of items obtained at the last checkpoint
    */
@@ -35,13 +28,4 @@ export interface Collection {
    * The rank of the user in the collection at the last checkpoint (0-indexed)
    */
   lastCheckpointRankIndex: number
-}
-
-export interface BapScore {
-  username: string
-  displayName: string
-  skilling: number
-  minigamesClues: number
-  pvm: number
-  total: number
 }
